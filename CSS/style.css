@@ -1,0 +1,330 @@
+
+
+/* -----DEIXAR ZERADO A FORMATAÇÃO*/
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+
+/* -----BODY E TITULOS PRINCIPAIS-----*/
+body{
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:whitesmoke;
+}
+
+
+h1{
+    color: white;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+h2{
+    color: black;
+    font-size: 25px;
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+
+
+/*
+-----HEADER-----
+*/
+
+#header{
+
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+
+}
+
+
+#menu{
+    padding: 10px 0;
+   
+   
+}
+
+
+#menu a{
+
+    color: white;
+    margin: 0px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#menu a:hover{
+    color:gray
+}
+
+
+/*
+-----RESPONSIVIDADE DO HEADER-----
+*/
+
+
+@media (max-width: 768px) {
+    #header h1 {
+        font-size: 32px;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px; /* espaçamento entre links */
+    }
+
+    #menu a {
+        margin: 0;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 28px;
+    }
+
+    #menu a {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+/*
+-----CONTEUDO SOBRE-----
+*/
+
+*p{
+
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+#content {
+
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+/*
+-----CONTEUDO FORMAÇÃO-----
+*/
+
+#contformul{
+
+    list-style: disc;
+    width: fit-content; /* faz a lista ter a largura necessária*/
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px;
+    max-width: 90%;
+    text-align: left;
+    padding-top: 15px;
+}
+
+li{
+    margin: 8px 0;
+}
+
+ul{
+
+    padding-left: 20px;
+}
+
+/* CENTRALIZAÇÃO E ESPAÇAMENTO EM TELAS PEQUENAS */
+@media (max-width: 480px) {
+    #content, #contformul {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #contformul li {
+        font-size: 16px;
+    }
+}
+
+
+
+/*
+-----CONTEUDO CONTATO-----
+*/
+
+
+#form-contato{
+
+    padding: 20px;
+    
+
+
+}
+
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.modal-content button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #004999;
+}
+
+/*
+-----CONTEUDO PORTIFOLIO-----
+*/
+
+#repos{
+
+    text-align: center;
+    margin-top: 15px;
+}
+
+#repos h4{
+
+    margin-bottom: 10px;
+
+}
+
+#repos a{
+
+    text-decoration:none;
+    color:#004c99;
+    
+}
+
+#repos a:hover{
+
+    color:gray;
+    
+}
+
+
+
+
+
+
+/*
+-----CONTEUDO FORMS CONTATO-----
+*/
+main {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: #f4f6fa;
+    margin: 0 auto;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 750px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Rótulos */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+/* Campos de entrada e área de texto */
+input, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 6px rgba(0, 102, 204, 0.3);
+    outline: none;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004c99;
+}
+
+/* Área de texto */
+textarea {
+    resize: none;
+    height: 100px;
+}
